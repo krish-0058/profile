@@ -1,0 +1,253 @@
+.loader {
+  width: 90px;              /* increased size */
+  aspect-ratio: 1;
+  display: grid;
+  border: 6px solid #0000; /* thicker border */
+  border-radius: 50%;
+  border-right-color: #258bb0;
+  animation: l15 1s infinite linear;
+}
+
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 6px;              /* increased from 2px */
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+
+.loader::after {
+  margin: 14px;             /* increased from 8px */
+  animation-duration: 3s;
+}
+
+@keyframes l15 { 
+  100% { transform: rotate(1turn); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //// Animations  //// */
+
+
+
+/*////// Fade In //////////*/
+.fade-in1 {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+.fade-in2 {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.4s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/////// Fade Up //////*/
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+.fade-up1 {
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+.fade-up2 {
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 1.4s;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Slide From Left */
+.slide-left {
+  animation: slideLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////// Slide From Right //////////////*/
+.slide-right {
+  animation: slideRight 0.8s ease-out forwards;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
