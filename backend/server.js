@@ -94,10 +94,13 @@ const imageUpload = multer({
 const fileUpload = multer({
   storage: new CloudinaryStorage({
     cloudinary,
-    params: {
-      folder: "profile",
-      resource_type: "raw", // ⭐ for pdf, docx
-    },
+    params: async (req, file) => ({
+        folder: "profile",
+        resource_type: "raw",
+        public_id: file.originalname.replace(".pdf", ""),
+        format: "pdf",
+        type: "upload"      
+    })
   }),
 });
 
@@ -176,7 +179,7 @@ app.post("/pdf", fileUpload.single("pdf"), async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ message: "No PDF uploaded" });
     }
-    console.log(req.file.mimetype)
+
     await homeSchema.findOneAndUpdate(
       {},
       { $set: { pdf: req.file.path } },
