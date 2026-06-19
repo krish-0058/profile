@@ -182,7 +182,7 @@ export default function App() {
               </button>
             </a>
 
-            <a href={data.pdf} rel="noopener noreferrer" download>
+            <a href={data.pdf} target="_blank" rel="noopener noreferrer">
               <button className="border border-blue-500 px-6 py-2 rounded-lg hover:bg-blue-500/10 cursor-pointer">
                 Download CV
               </button>
